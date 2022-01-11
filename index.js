@@ -5,8 +5,10 @@ var user=readline.question(chalk.yellow("What is Your name? "));
 console.log(chalk.yellow("\n Welcome " +user+"\n"));
 console.log(chalk.yellow("Welcome to * Prajakt's Quiz * \n"));
 
+var user1=readline.question(chalk.bgCyan("You know me personally?y/n "));
 
 var score=0;
+if(user1==="y"){
 
 function quiz(question, answer){
   var useranswer=readline.question(question);
@@ -23,7 +25,7 @@ console.log("--------------------------------------------");
 
 var questionList = [
   {
-  que:"Where do I live? \n a.Rahuri \n b.A.Nagar \n c.Pune \n ",
+  que:"\nWhere do I live? \n a.Rahuri \n b.A.Nagar \n c.Pune \n ",
   ans:"a",
 },
 {
@@ -78,4 +80,7 @@ if(score === questionList.length){
 }else{
   console.log(chalk.yellow.underline("Your total Score is:"+ score+"\n"));
   console.log(chalk.green("Prajakt is best scorer"));
+}
+}else{
+  console.log(chalk.bgRed("\nSorry! This game is not for you."));
 }
